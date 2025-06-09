@@ -318,7 +318,7 @@ export default function Vision() {
                       )
                     })}
                   </g>
-                </svg>
+                                </svg>
 
                 {nodes.map((node) => (
                   <div
@@ -347,24 +347,25 @@ export default function Vision() {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              </div> {/* neural-network */}
+            </div> {/* scale-wrapper */}
+          </div> {/* neural-network-wrapper */}
+        </div> {/* about-image */}
+      </div> {/* about-content */}
+    </div> {/* container */}
 
-      <style jsx>{`
-        .neural-network {
-          height: 500px;
-          width: 100%;
-          position: relative;
-        }
-        .neural-network-wrapper {
-          border-radius: 20px;
-          background: #000;
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
-        }
-      `}</style>
-    </section>
+    <style jsx>{`
+      .neural-network {
+        height: 500px;
+        width: 100%;
+        position: relative;
+      }
+      .neural-network-wrapper {
+        border-radius: 20px;
+        background: #000;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+      }
+    `}</style>
+  </section>
   );
 }
