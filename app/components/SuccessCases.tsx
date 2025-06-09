@@ -1,7 +1,6 @@
 "use client"
 
 import { Star, Building, Landmark, Stethoscope, Store, GraduationCap, Factory } from "lucide-react"
-import ParticleBackground from "./ParticleBackground"
 
 const testimonials = [
   {
@@ -41,7 +40,6 @@ const companies = [
 export default function SuccessCases() {
   return (
     <section className="case-studies" id="case-studies">
-     <ParticleBackground />
       <div className="container">
         <div className="section-title">
           <h2>Casos de Éxito</h2>
