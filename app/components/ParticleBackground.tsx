@@ -1,3 +1,4 @@
+// ParticleBackground.tsx
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -16,6 +17,8 @@ export default function ParticleBackground() {
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number>();
   const mouseRef = useRef({ x: -9999, y: -9999 }); 
+  // ^–– Este (-9999,-9999) solo es para que, hasta que no haya un "tap" o movimiento de ratón, 
+  //    no se dibujen líneas al (0,0). No afecta al desplazamiento del canvas.
 
   useEffect(() => {
     const canvas = canvasRef.current!;
@@ -30,13 +33,17 @@ export default function ParticleBackground() {
     const createParticles = () => {
       // Calculamos cuántas partículas mostrar (menos en móvil, pero un mínimo/­máximo)
       const baseCount = Math.floor((width * height) / (isMobile ? 34000 : 35000));
-      const count = Math.max(isMobile ? 28 : 30, Math.min(baseCount, isMobile ? 40 : 40));
+      const count = Math.max(isMobile ? 28 : 30, Math.min(baseCount, isMobile ? 40 : 45));
 
       const arr: Particle[] = [];
       for (let i = 0; i < count; i++) {
         arr.push({
           x: Math.random() * width,
           y: Math.random() * height,
+          // ←► Aquí puedes “subir” la velocidad en móvil. 
+          // Antes teníamos (isMobile ? 0.3 : 0.4). Si quieres que vaya más rápido, por ejemplo:
+           
+          // Eso haría que en móvil la velocidad fuera 0.4 en lugar de 0.3. Prueba a subir de 0.3 → 0.35 o 0.4.
           vx: (Math.random() - 0.5) * (isMobile ? 0.5 : 0.5),
           vy: (Math.random() - 0.5) * (isMobile ? 0.5 : 0.5),
           size: Math.random() * (isMobile ? 1.5 : 2) + 0.5,
@@ -151,8 +158,17 @@ export default function ParticleBackground() {
       mouseRef.current.y = e.clientY;
     };
 
+    // -- ¡IMPORTANTE! Ya NO ponemos ningún listener de touchmove:
+    // const handleTouchMove = (e: TouchEvent) => {
+    //   if (e.touches.length > 0) {
+    //     mouseRef.current.x = e.touches[0].clientX;
+    //     mouseRef.current.y = e.touches[0].clientY;
+    //   }
+    // };
+
     // Registramos SOLO mousemove (desktop)
     window.addEventListener("mousemove", handleMouseMove);
+    // window.addEventListener("touchmove", handleTouchMove, { passive: true });
 
     // ——————————————————————————————  
     // 5) Si cambian las dimensiones, redimensionamos y recreamos partículas  
@@ -162,7 +178,7 @@ export default function ParticleBackground() {
       height = window.innerHeight;
       canvas.width = width;
       canvas.height = height;
-      createParticles();
+   
     };
     window.addEventListener("resize", resizeCanvas);
 
@@ -178,6 +194,7 @@ export default function ParticleBackground() {
     // ——————————————————————————————
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      // window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("resize", resizeCanvas);
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
@@ -189,7 +206,8 @@ export default function ParticleBackground() {
       className="fixed top-0 left-0 w-full h-full pointer-events-none"
       style={{
         background: "transparent",
-        zIndex: -1, // Siempre detrás de todo el contenido
+        // Si quieres que en móvil vaya siempre detrás de todo: zIndex = 0
+        zIndex: 0,
         touchAction: "none",
       }}
     />

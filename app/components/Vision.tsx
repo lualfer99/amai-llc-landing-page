@@ -265,15 +265,18 @@ export default function Vision() {
             </div>
           </div>
 
-          <div className="about-image">
+          <div className="about-image hidden md:block">
             <div
-              className="neural-network-wrapper w-full max-w-none h-[275px] sm:h-[500px] overflow-hidden relative"
+              className="neural-network-wrapper w-full max-w-none h-[275px] sm:h-[500px] overflow-hidden relative hidden md:block"
               ref={networkRef}
-              
+              style={{
+                maxWidth: window.innerWidth <= 768 ? "100%" : "610px",
+                margin: window.innerWidth <= 768 ? "0 auto" : "0 auto 0 -20px",
+                position: "relative",
+                overflow: "visible",
+                height: window.innerWidth <= 768 ? "300px" : "500px",
+              }}
             >
-            {/* Este wrapper interno nos ayuda a hacer resecaling en móvil */}
-            <div className="w-full h-full sm:scale-100 scale-[0.55] origin-top-left">
-              
               <canvas ref={canvasRef} className="neural-network-canvas" />
               <div className="neural-network">
                 <svg
@@ -318,7 +321,7 @@ export default function Vision() {
                       )
                     })}
                   </g>
-                                </svg>
+                </svg>
 
                 {nodes.map((node) => (
                   <div
@@ -347,25 +350,24 @@ export default function Vision() {
                     </div>
                   </div>
                 ))}
-              </div> {/* neural-network */}
-            </div> {/* scale-wrapper */}
-          </div> {/* neural-network-wrapper */}
-        </div> {/* about-image */}
-      </div> {/* about-content */}
-    </div> {/* container */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <style jsx>{`
-      .neural-network {
-        height: 500px;
-        width: 100%;
-        position: relative;
-      }
-      .neural-network-wrapper {
-        border-radius: 20px;
-        background: #000;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
-      }
-    `}</style>
-  </section>
-  );
+      <style jsx>{`
+        .neural-network {
+          height: 500px;
+          width: 100%;
+          position: relative;
+        }
+        .neural-network-wrapper {
+          border-radius: 20px;
+          background: #000;
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+        }
+      `}</style>
+    </section>
+  )
 }

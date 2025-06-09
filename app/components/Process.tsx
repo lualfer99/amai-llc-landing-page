@@ -1,6 +1,7 @@
 "use client"
 
 import { Search, PenTool, Code, TestTube, Headphones } from "lucide-react"
+import ParticleBackground from "./ParticleBackground"
 
 const processSteps = [
   {
@@ -32,8 +33,9 @@ const processSteps = [
 
 export default function Process() {
   return (
-    <section className="process" id="process">
-      <div className="container">
+    <section className="process md:bg-transparent" id="process">
+     <ParticleBackground />
+      <div className="container md:bg-transparent">
         <div className="section-title">
           <h2>Nuestro Proceso</h2>
           <p>Aplicamos un enfoque iterativo y orientado a objetivos

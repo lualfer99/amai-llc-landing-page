@@ -1,10 +1,9 @@
 "use client"
-import ParticleBackground from "./ParticleBackground"
+
 
 export default function Hero() {
   return (
     <section className="hero hero-stable" id="home">
-     <ParticleBackground />
       <div className="container">
         <div className="hero-content">
           <h1 className="hero-title neon-text">
