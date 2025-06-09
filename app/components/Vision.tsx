@@ -366,5 +366,5 @@ export default function Vision() {
         }
       `}</style>
     </section>
-  )
+  );
 }

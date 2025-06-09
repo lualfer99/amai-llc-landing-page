@@ -159,31 +159,28 @@ export default function Footer() {
             </p>
           </div>
         </div>
-
         {/* Footer bottom */}
-    
-          <div className="footer-bottom mt-8 border-t border-gray-600 pt-4">
-            {/* 
-              1) Hacemos que el contenedor principal sea flex-column en móvil (flex-col), 
-                y flex-row a partir de sm (sm:flex-row).
-              2) Cada bloque (copyright y “Desarrollado con…”) va en su propio <span>.
-            */}
-            <p className="flex flex-col sm:flex-row items-center justify-center text-center text-xs opacity-60 gap-1">
-              {/* Bloque 1: copyright */}
-              <span>
-                &copy; 2024 AMAI | Todos los derechos reservados |
-              </span>
+        <div className="footer-bottom mt-8 border-t border-gray-600 pt-4">
+          {/* 
+            1) Hacemos que el contenedor principal sea flex-column en móvil (flex-col), 
+              y flex-row a partir de sm (sm:flex-row).
+            2) Cada bloque (copyright y “Desarrollado con…”) va en su propio <span>.
+          */}
+          <p className="flex flex-col sm:flex-row items-center justify-center text-center text-xs opacity-60 gap-1">
+            {/* Bloque 1: copyright */}
+            <span>
+              &copy; 2024 AMAI | Todos los derechos reservados |
+            </span>
 
-              {/* Bloque 2: “Desarrollado con ❤️ e IA” */}
-              <span className="flex items-center whitespace-nowrap">
-                Desarrollado con
-                <Heart className="w-4 h-4 text-jade mx-0.5 fill-current" />
-                e&nbsp;IA
-              </span>
-            </p>
-          </div>
-
-
+            {/* Bloque 2: “Desarrollado con ❤️ e IA” */}
+            <span className="flex items-center whitespace-nowrap">
+              Desarrollado con
+              <Heart className="w-4 h-4 text-jade mx-0.5 fill-current" />
+              e&nbsp;IA
+            </span>
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }
