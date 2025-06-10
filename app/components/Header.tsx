@@ -28,7 +28,7 @@ export default function Header() {
       <div className="container">
         <div className="flex justify-between items-center">
           <a href="#" className="logo">
-            <span className="text-2xl font-bold text-white">AMAI</span>
+            <img src="/images/amai-logo-transparent.png" alt="AMAI Logo" className="logo-image" />
           </a>
           <nav>
             <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

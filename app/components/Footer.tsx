@@ -1,35 +1,45 @@
 // app/components/Footer.tsx
-"use client"
+"use client";
 
-import { Facebook, Twitter, Linkedin, Instagram, ChevronRight, MapPin, Phone, Mail, Clock, Heart } from "lucide-react"
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  ChevronRight,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Heart,
+} from "lucide-react";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <footer className="footer bg-gray-dark text-white pt-8 pb-4">
       <div className="container mx-auto px-4">
-        {/* 
-          Con estas clases Tailwind hacemos:
-            - móvil (≤639px): grid-cols-1  → 1 sola columna
-            - sm (≥640px):    grid-cols-2  → 2 columnas
-            - lg (≥1024px):   grid-cols-4  → 4 columnas
-        */}
+        {/* Footer top */}
         <div className="footer-top grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6">
+          
           {/* Bloque 1: logo + descripción + redes */}
           <div className="text-center sm:text-left">
             <a href="#" className="footer-logo inline-block mb-4">
-              <span className="text-2xl font-bold text-white">AMAI</span>
+              <img
+                src="/images/amai-logo-transparent.png"
+                alt="AMAI Logo"
+                className="footer-logo-image h-16 mx-auto sm:mx-0"
+              />
             </a>
             <p className="footer-description text-sm leading-relaxed opacity-75">
               Agentes entrenados con IA que responden, califican y<br />
-              venden por ti. Lleva tu negocio al siguiente nivel con
-              <br />
+              venden por ti. Lleva tu negocio al siguiente nivel con<br />
               nuestras soluciones avanzadas de IA
             </p>
             <div className="footer-social flex justify-center sm:justify-start mt-4 space-x-4">
@@ -52,46 +62,23 @@ export default function Footer() {
           <div>
             <h4 className="footer-title text-lg font-semibold mb-4">Enlaces rápidos</h4>
             <ul className="footer-links space-y-2 text-sm">
-              <li>
-                <button
-                  onClick={() => scrollToSection("home")}
-                  className="flex items-center gap-1 hover:text-jade transition"
-                >
-                  <ChevronRight className="w-4 h-4" /> Inicio
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="flex items-center gap-1 hover:text-jade transition"
-                >
-                  <ChevronRight className="w-4 h-4" /> Servicios
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="flex items-center gap-1 hover:text-jade transition"
-                >
-                  <ChevronRight className="w-4 h-4" /> Visión
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("process")}
-                  className="flex items-center gap-1 hover:text-jade transition"
-                >
-                  <ChevronRight className="w-4 h-4" /> Proceso
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("technologies")}
-                  className="flex items-center gap-1 hover:text-jade transition"
-                >
-                  <ChevronRight className="w-4 h-4" /> Tecnologías
-                </button>
-              </li>
+              {["home","services","about","process","technologies"].map((sec) => (
+                <li key={sec}>
+                  <button
+                    onClick={() => scrollToSection(sec)}
+                    className="flex items-center gap-1 hover:text-jade transition"
+                  >
+                    <ChevronRight className="w-4 h-4" />{" "}
+                    {{
+                      home: "Inicio",
+                      services: "Servicios",
+                      about: "Visión",
+                      process: "Proceso",
+                      technologies: "Tecnologías",
+                    }[sec]}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -99,31 +86,19 @@ export default function Footer() {
           <div>
             <h4 className="footer-title text-lg font-semibold mb-4">Servicios</h4>
             <ul className="footer-links space-y-2 text-sm">
-              <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
-                  <ChevronRight className="w-4 h-4" /> Automatización
-                </a>
-              </li>
-              <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
-                  <ChevronRight className="w-4 h-4" /> Chatbots Avanzados
-                </a>
-              </li>
-              <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
-                  <ChevronRight className="w-4 h-4" /> Análisis Predictivo
-                </a>
-              </li>
-              <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
-                  <ChevronRight className="w-4 h-4" /> IA Personalizada
-                </a>
-              </li>
-              <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
-                  <ChevronRight className="w-4 h-4" /> Consultoría
-                </a>
-              </li>
+              {[
+                "Automatización",
+                "Chatbots Avanzados",
+                "Análisis Predictivo",
+                "IA Personalizada",
+                "Consultoría",
+              ].map((srv) => (
+                <li key={srv}>
+                  <a href="#" className="flex items-center gap-1 hover:text-jade transition">
+                    <ChevronRight className="w-4 h-4" /> {srv}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -152,11 +127,11 @@ export default function Footer() {
             <span className="flex items-center whitespace-nowrap">
               Desarrollado con
               <Heart className="w-4 h-4 text-jade mx-0.5 fill-current" />
-              e&nbsp;IA
+              e IA
             </span>
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
