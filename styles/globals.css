@@ -2,17 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
+/* ————————————————————————————————
+   1) Base styles (resets, variables, body, etc.)
+   ———————————————————————————————— */
 @layer base {
+  /* Variables de color y tipografía */
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -82,13 +76,32 @@ body {
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  /* Reseteo básico */
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Definición de body por defecto */
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))] font-sans;
+  }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
+/* ————————————————————————————————
+   2) Components (vacío de momento)
+   ———————————————————————————————— */
+@layer components {
+  /* Aquí puedes añadir tus componentes con @apply */
+}
+
+/* ————————————————————————————————
+   3) Utilities extra
+   ———————————————————————————————— */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
