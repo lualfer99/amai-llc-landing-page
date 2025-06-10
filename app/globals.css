@@ -311,7 +311,7 @@ body {
 
 /* Services Section */
 .services {
-  padding: 100px 0 80px;
+  padding: 118px 0 80px;
   position: relative;
   overflow: hidden;
 }
@@ -494,7 +494,7 @@ body {
 
 /* About Us Section */
 .about {
-  padding: 100px 0;
+  padding: 118px 0;
   position: relative;
   overflow: hidden;
 }
@@ -977,7 +977,7 @@ body {
 
 /* Technologies Section */
 .technologies {
-  padding: 100px 0;
+  padding: 120px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1053,7 +1053,7 @@ body {
 
 /* Case Studies Section */
 .case-studies {
-  padding: 100px 0;
+  padding: 120px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1174,7 +1174,7 @@ body {
 
 /* Contact Section */
 .contact {
-  padding: 100px 0;
+  padding: 120px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1473,49 +1473,6 @@ textarea.form-control {
   background-color: var(--jade);
 }
 
-/* ============================= */
-/* CONFIGURACIÓN DE FONDOS PARA MÓVIL */
-/* ============================= */
-@media screen and (max-width: 768px) {
-  /* Secciones con fondo negro sólido (cubren las partículas) */
-  .services {
-    background-color: #000 !important;
-    position: relative;
-    z-index: 10;
-  }
-
-  .about {
-    background-color: #000 !important;
-    position: relative;
-    z-index: 10;
-  }
-
-  .technologies {
-    background-color: #000 !important;
-    position: relative;
-    z-index: 10;
-  }
-
-  .contact {
-    background-color: #000 !important;
-    position: relative;
-    z-index: 10;
-  }
-
-  /* Secciones transparentes (dejan ver las partículas) */
-  .process {
-    background-color: transparent !important;
-    position: relative;
-    z-index: 10;
-  }
-
-  .case-studies {
-    background-color: transparent !important;
-    position: relative;
-    z-index: 10;
-  }
-}
-
 /* Responsive design */
 @media screen and (max-width: 1200px) {
   .container {
@@ -1780,19 +1737,13 @@ textarea.form-control {
   }
 
   .node-circle {
-    width: 60px;   /* antes: 50px */
-    height: 60px;  /* antes: 50px */
-  }
-
-  .node-inner {
-    width: 50%;    /* antes 70% del parent, pero 70% de 60px es 42px, suficiente */
-    height: 50%;   /* si quieres hacerlo más grande, pon 60% o 65% */
+    width: 40px;
+    height: 40px;
   }
 
   .node-label {
-    top: 75px;          /* antes: 60px */
-    font-size: 14px;    /* antes: 12px */
-    padding: 6px 12px;  /* opcional: un poquitín más de relleno */
+    font-size: 11px;
+    top: 50px;
   }
 
   .node-tooltip {
@@ -1802,16 +1753,18 @@ textarea.form-control {
   }
 
   .satellite-circle {
-    width: 18px;  /* antes: 15px */
-    height: 18px; /* antes: 15px */
+    width: 12px;
+    height: 12px;
   }
 
   .satellite-label {
-    font-size: 10px; /* antes: 9px */
+    font-size: 8px;
   }
 
   .process {
     padding: 60px 0;
+    background-color: transparent;
+    zIndex: -1;
   }
 
   .timeline-item {
@@ -1860,6 +1813,8 @@ textarea.form-control {
 
   .case-studies {
     padding: 60px 0;
+    background-color: transparent
+  
   }
 
   .testimonial-container {
@@ -1994,10 +1949,6 @@ textarea.form-control {
     font-size: 24px;
   }
 
-  .hero-title {
-    font-size: 24px;
-  }
-
   .hero-subtitle {
     font-size: 14px;
   }
@@ -2016,7 +1967,7 @@ textarea.form-control {
   .technologies,
   .case-studies,
   .contact {
-    padding: 50px 0;
+    padding: 90px 0;
   }
 
   .service-card,
@@ -2033,6 +1984,7 @@ textarea.form-control {
   .tech-container {
     grid-template-columns: 1fr;
     gap: 15px;
+
   }
 
   .neural-network {
@@ -2076,87 +2028,5 @@ textarea.form-control {
   .footer-top {
     gap: 20px;
     padding-bottom: 20px;
-  }
-}
-
-/* Mobile particle optimization */
-@media screen and (max-width: 768px) {
-  .hero-stable canvas {
-    opacity: 1;
-    filter: none;
-    pointer-events: none;
-  }
-
-  body {
-    -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
-  }
-
-  .hero {
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-  }
-}
-
-/* Landscape mobile optimization */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-  .hero {
-    padding: 40px 0;
-    min-height: auto;
-  }
-
-  .hero-title {
-    font-size: 22px;
-  }
-
-  .hero-subtitle {
-    font-size: 13px;
-    margin-bottom: 15px;
-  }
-
-  .nav-links {
-    top: 50px;
-    padding: 20px;
-  }
-}
-
-/* Mobile-specific interactions */
-@media (hover: none) and (pointer: coarse) {
-  .service-card:active,
-  .tech-item:active,
-  .testimonial:active {
-    transform: translateY(-5px);
-    transition: transform 0.2s ease;
-  }
-
-  .timeline-item:active .timeline-icon {
-    background-color: var(--jade);
-    color: var(--black);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 168, 107, 0.3);
-  }
-
-  .neural-node:active .node-circle {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(0, 168, 107, 0.8);
-    background: rgba(0, 168, 107, 0.3);
-  }
-
-  .btn:active {
-    transform: scale(0.98);
-  }
-}
-
-/* Scroll-triggered animations for mobile */
-@media screen and (max-width: 768px) {
-  .fade-in-up {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-  }
-
-  .fade-in-up.active {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
