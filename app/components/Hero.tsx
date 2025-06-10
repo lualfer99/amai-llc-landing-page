@@ -1,9 +1,9 @@
 "use client"
 
+
 export default function Hero() {
   return (
     <section className="hero hero-stable" id="home">
-
       <div className="container">
         <div className="hero-content">
           <h1 className="hero-title neon-text">
@@ -14,8 +14,7 @@ export default function Hero() {
             </>
           </h1>
           <p className="hero-subtitle">
-            Transformamos el futuro con inteligencia artificial. Soluciones personalizadas que optimizan procesos y
-            aumentan resultados.
+            Transformamos el futuro con inteligencia artificial. Soluciones personalizadas que optimizan procesos y aumentan resultados.
           </p>
           <p className="hero-subtitle neon-text">I'm not a tool. I'm AMAI</p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
