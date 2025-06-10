@@ -1,18 +1,7 @@
 // app/components/Footer.tsx
-"use client";
+"use client"
 
-import {
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  ChevronRight,
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Heart
-} from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram, ChevronRight, MapPin, Phone, Mail, Clock, Heart } from "lucide-react"
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -36,11 +25,7 @@ export default function Footer() {
           {/* Bloque 1: logo + descripción + redes */}
           <div className="text-center sm:text-left">
             <a href="#" className="footer-logo inline-block mb-4">
-              <img
-                src="/images/amai-logo-transparent.png"
-                alt="AMAI Logo"
-                className="footer-logo-image h-16 mx-auto sm:mx-0"
-              />
+              <span className="text-2xl font-bold text-white">AMAI</span>
             </a>
             <p className="footer-description text-sm leading-relaxed opacity-75">
               Agentes entrenados con IA que responden, califican y<br />
