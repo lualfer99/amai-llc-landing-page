@@ -1,7 +1,8 @@
 "use client"
 
 import { Star, Building, Landmark, Stethoscope, Store, GraduationCap, Factory } from "lucide-react"
-import ParticleBackground from "./ParticleBackground"
+import dynamic from "next/dynamic"
+const ParticleBackground = dynamic(() => import("./ParticleBackground"), { ssr: false })
 
 const testimonials = [
   {

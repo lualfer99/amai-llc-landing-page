@@ -1,7 +1,8 @@
 "use client"
 
 import { Search, PenTool, Code, TestTube, Headphones } from "lucide-react"
-import ParticleBackground from "./ParticleBackground"
+import dynamic from "next/dynamic"
+const ParticleBackground = dynamic(() => import("./ParticleBackground"), { ssr: false })
 
 const processSteps = [
   {

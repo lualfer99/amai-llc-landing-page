@@ -314,6 +314,7 @@ body {
   padding: 118px 0 80px;
   position: relative;
   overflow: hidden;
+
 }
 
 .section-title {
@@ -497,12 +498,14 @@ body {
   padding: 118px 0;
   position: relative;
   overflow: hidden;
+ 
 }
 
 .about-content {
   display: flex;
   align-items: center;
   gap: 50px;
+
 }
 
 .about-text {
@@ -588,6 +591,7 @@ body {
   flex: 1;
   position: relative;
   min-height: 400px;
+
 }
 
 /* Neural Network Styles - Enhanced Version */
@@ -1696,6 +1700,7 @@ textarea.form-control {
 
   .about {
     padding: 60px 0;
+
   }
 
   .about-title {
