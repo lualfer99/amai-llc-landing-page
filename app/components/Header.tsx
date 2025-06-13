@@ -24,12 +24,14 @@ export default function Header() {
   }
 
   return (
-    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
+    <header className={`header fixed top-0 left-0 w-full ${isScrolled ? "scrolled" : ""}`}
+      style={{ background: "#000",  zIndex: 999}}
+    >
       <div className="container">
         <div className="flex justify-between items-center">
           <a href="#" className="logo">
 
-            <img src="/images/amai-logo-transparent.png" alt="AMAI Logo" className="logo-image" />
+            <img src="/images/amai-logo-transparent.png" alt="AMAI Logo" className="logo-image mx-auto" />
       
           </a>
           <nav>

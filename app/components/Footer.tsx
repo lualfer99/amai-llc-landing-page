@@ -22,14 +22,13 @@ export default function Footer() {
         */}
         <div className="footer-top grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6">
           {/* Bloque 1: logo + descripción + redes */}
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-center md:text-center">
             <a href="#" className="footer-logo inline-block mb-4">
               <img src="/images/amai-logo-transparent.png" alt="AMAI Logo" className="logo-image" />
             </a>
             <p className="footer-description text-sm leading-relaxed opacity-75">
-              Agentes entrenados con IA que responden, califican y<br />
+              Agentes entrenados con IA que responden, califican 
               venden por ti. Lleva tu negocio al siguiente nivel con
-              <br />
               nuestras soluciones avanzadas de IA
             </p>
             <div className="footer-social flex justify-center sm:justify-start mt-4 space-x-4">
@@ -131,10 +130,10 @@ export default function Footer() {
           <div className="footer-contact">
             <h4 className="footer-title text-lg font-semibold mb-4">Contacto</h4>
             <p className="flex items-center gap-2 text-sm opacity-75 mb-1">
-              <MapPin className="w-5 h-5" /> Av. Innovación 1234, Madrid
+              <MapPin className="w-5 h-5" /> Madrid, España
             </p>
             <p className="flex items-center gap-2 text-sm opacity-75 mb-1">
-              <Phone className="w-5 h-5" /> +34 91 123 4567
+              <Phone className="w-5 h-5" /> +34 658 38 35 17
             </p>
             <p className="flex items-center gap-2 text-sm opacity-75 mb-1">
               <Mail className="w-5 h-5" /> info@amai.solutions

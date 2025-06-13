@@ -98,18 +98,20 @@ body {
   }
 
   .footer-logo-image {
-    height: 60px;
+    height: 120px;
+ 
   }
 }
 
 @media screen and (max-width: 480px) {
   .logo-image {
     height: 60px;
+ 
   }
 
   .footer-logo-image {
     height: 90px;
-    margin-right: 10px;
+    
   }
 }
 
@@ -162,6 +164,7 @@ body {
   border: none;
   color: var(--white);
   font-size: 24px;
+  font-weight: 700;
 }
 
 /* Hero Section */
@@ -232,7 +235,7 @@ body {
 }
 
 /* Neon Buttons Effect */
-.btn {
+  .btn {
   display: inline-block;
   padding: 14px 32px;
   border-radius: 50px;
@@ -277,8 +280,7 @@ body {
   z-index: -1;
   background: var(--jade);
   transform: scaleX(0);
-  transform-origin: 0 50%;
-  transition: transform 0.5s ease-out;
+  
 }
 
 .btn-primary::before {
@@ -308,13 +310,11 @@ body {
     box-shadow: 0 0 5px var(--jade-glow), 0 0 10px var(--jade-glow);
   }
 }
-
 /* Services Section */
 .services {
   padding: 118px 0 80px;
   position: relative;
   overflow: hidden;
-
 }
 
 .section-title {
@@ -325,7 +325,7 @@ body {
 
 .section-title h2 {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 25px;
   position: relative;
   display: inline-block;
@@ -492,6 +492,7 @@ body {
     opacity: 0.7;
   }
 }
+
 
 /* About Us Section */
 .about {
@@ -877,7 +878,7 @@ body {
 
 /* Process Section */
 .process {
-  padding: 120px 0;
+  padding: 112px 0;
   position: relative;
   overflow: hidden;
 }
@@ -981,7 +982,7 @@ body {
 
 /* Technologies Section */
 .technologies {
-  padding: 120px 0;
+  padding: 112px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1057,7 +1058,7 @@ body {
 
 /* Case Studies Section */
 .case-studies {
-  padding: 120px 0;
+  padding: 112px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1178,7 +1179,7 @@ body {
 
 /* Contact Section */
 .contact {
-  padding: 120px 0;
+  padding: 112px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1307,6 +1308,7 @@ textarea.form-control {
 
 .footer-logo {
   font-size: 24px;
+  margin-left: 25px;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 20px;
@@ -1317,7 +1319,8 @@ textarea.form-control {
   font-size: 14px;
   line-height: 1.6;
   opacity: 0.7;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  margin-top:-10px;
 }
 
 .footer-social {
@@ -1951,11 +1954,17 @@ textarea.form-control {
   }
 
   .hero-title {
-    font-size: 24px;
-  }
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+    }
 
   .hero-subtitle {
-    font-size: 14px;
+    font-size: 12px;
+    margin-bottom: -10px;
+   
   }
 
   .section-title h2 {
@@ -2027,7 +2036,7 @@ textarea.form-control {
   }
 
   .footer {
-    padding: 30px 0 15px;
+    padding: 20px 0 15px;
   }
 
   .footer-top {

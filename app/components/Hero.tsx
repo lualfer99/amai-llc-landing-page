@@ -1,7 +1,18 @@
+// app/components/Hero.tsx
 "use client"
 
-import dynamic from "next/dynamic"
+import { useCallback } from "react"
+
 export default function Hero() {
+  const smoothScroll = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+      e.preventDefault()
+      const el = document.getElementById(id)
+      if (el) el.scrollIntoView({ behavior: "smooth" })
+    },
+    []
+  )
+
   return (
     <section className="hero hero-stable" id="home">
       <div className="container">
@@ -19,10 +30,18 @@ export default function Hero() {
           </p>
           <p className="hero-subtitle neon-text">I'm not a tool. I'm AMAI</p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <a href="#contact" className="btn btn-primary w-full sm:w-auto">
+            <a
+              href="#contact"
+              onClick={(e) => smoothScroll(e, "contact")}
+              className="btn btn-primary w-full sm:w-auto"
+            >
               TRANSFORMA TU TIEMPO AHORA
             </a>
-            <a href="#services" className="btn btn-secondary w-full sm:w-auto">
+            <a
+              href="#services"
+              onClick={(e) => smoothScroll(e, "services")}
+              className="btn btn-secondary w-full sm:w-auto"
+            >
               Saber más
             </a>
           </div>

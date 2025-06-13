@@ -53,7 +53,7 @@ export default function Vision() {
 
   return (
     <section
-     className="about "
+     className="about  "
       id="about"
       ref={ref}
       style={{ background: "#000", position: "relative", zIndex: 20}}
