@@ -22,7 +22,7 @@ export default function Footer() {
         */}
         <div className="footer-top grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6">
           {/* Bloque 1: logo + descripción + redes */}
-          <div className="text-center sm:text-center md:text-center">
+          <div className="flex flex-col items-center lg:items-start text-justify">
             <a href="#" className="footer-logo inline-block mb-4">
               <img src="/images/amai-logo-transparent.png" alt="AMAI Logo" className="logo-image" />
             </a>

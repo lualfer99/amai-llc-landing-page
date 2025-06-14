@@ -1,6 +1,6 @@
 "use client"
 
-import { Bot, Cog, TrendingUp } from "lucide-react"
+import { Bot, Cog, TrendingUp, Globe, CheckCircle} from "lucide-react"
 
 const services = [
   {
@@ -34,12 +34,12 @@ const services = [
     ],
   },
   {
-    icon: <TrendingUp className="w-8 h-8" />,
+    icon: <Globe className="w-8 h-8" />,
     title: (
       <>
-        Análisis predictivo
+        Diseño Web
         <br />
-        de Estrategias
+        Personalizado
       </>
     ),
     description:
@@ -76,8 +76,9 @@ export default function Services() {
               <p className="service-description mb-6">{service.description}</p>
               <ul className="service-features">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex}>
-                    <i className="fas fa-check-circle"></i> {feature}
+                  <li key={featureIndex} className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-jade mt-1 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>

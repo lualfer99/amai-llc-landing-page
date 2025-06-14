@@ -1308,7 +1308,7 @@ textarea.form-control {
 
 .footer-logo {
   font-size: 24px;
-  margin-left: 25px;
+  margin-left: 35px;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 20px;
@@ -1320,7 +1320,7 @@ textarea.form-control {
   line-height: 1.6;
   opacity: 0.7;
   margin-bottom: 0px;
-  margin-top:-10px;
+  margin-top:0px;
 }
 
 .footer-social {
