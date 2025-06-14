@@ -20,29 +20,44 @@ export default function Footer() {
             - sm (≥640px):    grid-cols-2  → 2 columnas
             - lg (≥1024px):   grid-cols-4  → 4 columnas
         */}
-        <div className="footer-top grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6">
+        <div className="footer-top grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6 lg:gap-x-8">
           {/* Bloque 1: logo + descripción + redes */}
-          <div className="flex flex-col items-center lg:items-start text-justify">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <a href="#" className="footer-logo inline-block mb-4">
-              <img src="/images/amai-logo-transparent.png" alt="AMAI Logo" className="logo-image" />
+              <img
+                src="/images/amai-logo-transparent.png"
+                alt="AMAI Logo"
+                className="h-16 sm:h-20 lg:h-24 w-auto transition-all duration-300 hover:scale-105 filter brightness-100 drop-shadow-[0_0_8px_rgba(0,168,107,0.3)]"
+              />
             </a>
-            <p className="footer-description text-sm leading-relaxed opacity-75">
-              Agentes entrenados con IA que responden, califican 
-              venden por ti. Lleva tu negocio al siguiente nivel con
-              nuestras soluciones avanzadas de IA
+            <p className="footer-description text-sm sm:text-base leading-relaxed opacity-75 text-center sm:text-left text-justify max-w-xs sm:max-w-sm lg:max-w-none">
+              Agentes entrenados con IA que responden, califican y venden por ti. Lleva tu negocio al siguiente nivel
+              con nuestras soluciones avanzadas de IA.
             </p>
-            <div className="footer-social flex justify-center sm:justify-start mt-4 space-x-4">
-              <a href="#" className="social-link bg-white/10 rounded-full p-2 hover:bg-white/20">
-                <Facebook className="w-5 h-5 text-white" />
+            <div className="footer-social flex justify-center sm:justify-start mt-4 space-x-3 sm:space-x-4">
+              <a
+                href="#"
+                className="social-link bg-white/10 rounded-full p-2 sm:p-3 hover:bg-jade hover:scale-110 transition-all duration-300 group"
+              >
+                <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-black transition-colors" />
               </a>
-              <a href="#" className="social-link bg-white/10 rounded-full p-2 hover:bg-white/20">
-                <Twitter className="w-5 h-5 text-white" />
+              <a
+                href="#"
+                className="social-link bg-white/10 rounded-full p-2 sm:p-3 hover:bg-jade hover:scale-110 transition-all duration-300 group"
+              >
+                <Twitter className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-black transition-colors" />
               </a>
-              <a href="#" className="social-link bg-white/10 rounded-full p-2 hover:bg-white/20">
-                <Linkedin className="w-5 h-5 text-white" />
+              <a
+                href="#"
+                className="social-link bg-white/10 rounded-full p-2 sm:p-3 hover:bg-jade hover:scale-110 transition-all duration-300 group"
+              >
+                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-black transition-colors" />
               </a>
-              <a href="#" className="social-link bg-white/10 rounded-full p-2 hover:bg-white/20">
-                <Instagram className="w-5 h-5 text-white" />
+              <a
+                href="#"
+                className="social-link bg-white/10 rounded-full p-2 sm:p-3 hover:bg-jade hover:scale-110 transition-all duration-300 group"
+              >
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-black transition-colors" />
               </a>
             </div>
           </div>
