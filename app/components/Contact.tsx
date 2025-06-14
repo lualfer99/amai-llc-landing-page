@@ -127,7 +127,7 @@ ${message}
               <Phone className="w-6 h-6 text-jade" />
               <div>
                 <h4 className="font-semibold text-white">Teléfono</h4>
-                <p>+34 658 38 35 17</p>
+                <p>+34 614 72 41 73</p>
               </div>
             </div>
             <div className="info-item flex items-center gap-4">
