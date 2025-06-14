@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata = {
-  title: "AMAI | Landing Page",
+  title: "AMAI",
   description: "Soluciones de IA …",
     generator: 'v0.dev'
 }
