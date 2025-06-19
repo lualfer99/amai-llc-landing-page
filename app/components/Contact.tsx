@@ -5,6 +5,8 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { MapPin, Mail, Phone, Clock } from "lucide-react"
 import PhoneInput from "react-phone-input-2"
+import "react-phone-input-2/lib/style.css"
+
 
 interface FormData {
   name: string
@@ -191,7 +193,7 @@ export default function Contact() {
                     name: "phone",
                     required: true,
                     pattern: "^\\d{9,15}$",
-                    title: "Introduce sólo dígitos (entre 9 y 15 caracteres)"
+                    title: "Introduce sólo dígitos (entre 9 y 15 caracteres)",
                     
                     className:
                       "form-control w-full p-3 pl-16 rounded bg-gray-800 text-white border border-gray-700 focus:border-jade focus:ring-1 focus:ring-jade transition-colors",

@@ -10,7 +10,6 @@ import Technologies from "./components/Technologies"
 import SuccessCases from "./components/SuccessCases"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
-import "react-phone-input-2/lib/style.css"
 
 
 export default function Home() {
