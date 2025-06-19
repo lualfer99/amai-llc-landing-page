@@ -192,8 +192,9 @@ export default function Contact() {
                   inputProps={{
                     name: "phone",
                     required: true,
-                    pattern: "^\\d{9,15}$",
-                    title: "Introduce sólo dígitos (entre 9 y 15 caracteres)",
+                    // 1) lookahead que cuente sólo dígitos (9-15), 2) valores permitidos: +, dígitos y espacios
+                  pattern: "^(?=(?:.*\\d){9,15}$)[+\\d ]+$",
+                  title: "Introduce sólo dígitos y el signo + (entre 9 y 15 dígitos en total)",
                     
                     className:
                       "form-control w-full p-3 pl-16 rounded bg-gray-800 text-white border border-gray-700 focus:border-jade focus:ring-1 focus:ring-jade transition-colors",
