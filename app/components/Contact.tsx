@@ -12,30 +12,35 @@ export default function Contact() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const { name, email, company, message } = formData
-    const body = `
-Nombre: ${name}
-Email: ${email}
-Empresa: ${company}
+    setStatus("sending")
+zzz
+    try {
+      const res = await fetch(
+        "https://flows.amai.run/webhook/738f3d16-feac-4d64-857e-0c2842577495",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      )
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
 
-Mensaje:
-${message}
-    `.trim()
-
-    window.location.href =
-      `mailto:info@amai.solutions`
-      + `?subject=${encodeURIComponent("Contacto desde Web")}`
-      + `&body=${encodeURIComponent(body)}`
+      setStatus("ok")
+      setFormData({ name: "", email: "", company: "", message: "" })
+    } catch {
+      setStatus("error")
+    }
   }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) =>
+    setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }))
-  }
 
   return (
     <section
