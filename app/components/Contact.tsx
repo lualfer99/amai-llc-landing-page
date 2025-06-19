@@ -5,7 +5,6 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { MapPin, Mail, Phone, Clock } from "lucide-react"
 import PhoneInput from "react-phone-input-2"
-import "react-phone-input-2/lib/style.css"
 
 interface FormData {
   name: string
