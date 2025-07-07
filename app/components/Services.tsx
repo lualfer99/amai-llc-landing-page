@@ -19,7 +19,7 @@ const services = [
     icon: <Bot className="w-8 h-8" />,
     title: (
       <>
-        Chatbots de
+        Agentes de
         <br />
         Interacción Avanzada
       </>
@@ -37,18 +37,18 @@ const services = [
     icon: <Globe className="w-8 h-8" />,
     title: (
       <>
-        Diseño Web
+        Diseño
         <br />
-        Personalizado
+        Web Personalizado
       </>
     ),
     description:
-      "Convierte tus datos en decisiones inteligentes. Modelos predictivos entrenados para anticipar comportamientos clave, descubrir patrones ocultos y ofrecer visualizaciones interactivas que facilitan una toma de decisiones más rápida y precisa.",
+      "Diseñamos sitios web a medida que destacan con tu marca y mejoran la experiencia de usuario. Con interfaces intuitivas, código optimizado y SEO integrado, garantizamos rendimineto y accesibilidad en todos los dispositivos.",
     features: [
-      "Algoritmos personalizados para tu negocio",
-      "Detección de oportunidades invisibles",
-      "Visualización ejecutiva orientada a acción",
-      "Insights clave sin sobrecarga de información",
+      "Atención personalizada con gestor de proyecto dedicado",
+      "Optimización SEO que impulsa tu visibilidad online",
+      "Escalabilidad y arquitectura modular",
+      "Navegación fluida e intuitiva en todo momento",
     ],
   },
 ]
