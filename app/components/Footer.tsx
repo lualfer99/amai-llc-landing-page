@@ -28,7 +28,7 @@ export default function Footer() {
               <img src="/images/amai-logo-transparent.png" alt="AMAI Logo" className="logo-image" />
             </a>
             <p className="footer-description text-sm leading-relaxed opacity-75 text-center shadow-xl italic text-justify text-center text-justify">
-              Agentes entrenados con IA que responden, califican 
+              Agentes entrenados con IA que responden, califican y
               venden por ti. Lleva tu negocio al siguiente nivel con
               nuestras soluciones avanzadas de IA
             </p>
@@ -98,31 +98,50 @@ export default function Footer() {
           {/* Bloque 3: Servicios */}
           <div>
             <h4 className="footer-title text-lg font-semibold mb-4">Servicios</h4>
-            <ul className="footer-links space-y-2 text-sm">
+             <ul className="footer-links space-y-2 text-sm">
               <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="flex items-center gap-1 hover:text-jade transition"
+                >
                   <ChevronRight className="w-4 h-4" /> Automatización
-                </a>
+                </button>
               </li>
+
               <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
-                  <ChevronRight className="w-4 h-4" /> Chatbots Avanzados
-                </a>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="flex items-center gap-1 hover:text-jade transition"
+                >
+                  <ChevronRight className="w-4 h-4" /> Agentes de IA Avanzados
+                </button>
               </li>
+
               <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="flex items-center gap-1 hover:text-jade transition"
+                >
                   <ChevronRight className="w-4 h-4" /> Análisis Predictivo
-                </a>
+                </button>
               </li>
+
               <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="flex items-center gap-1 hover:text-jade transition"
+                >
                   <ChevronRight className="w-4 h-4" /> IA Personalizada
-                </a>
+                </button>
               </li>
+
               <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
-                  <ChevronRight className="w-4 h-4" /> Consultoría
-                </a>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="flex items-center gap-1 hover:text-jade transition"
+                >
+                  <ChevronRight className="w-4 h-4" /> Consultoria
+                </button>
               </li>
             </ul>
           </div>

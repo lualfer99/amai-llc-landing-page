@@ -25,6 +25,9 @@ body {
   background-color: var(--black);
   color: var(--white);
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -169,11 +172,18 @@ body {
 
 /* Hero Section */
 .hero {
-  position: relative;
+  //position: relative;
   height: 100vh;
+  //display: flex;
+  //align-items: center;
+  //overflow: hidden;
+  position: relative;
+  padding-top: 180px;
+  padding-bottom:40px;
   display: flex;
   align-items: center;
   overflow: hidden;
+}
 }
 
 /* Hero stability improvements for mobile */
@@ -1907,6 +1917,8 @@ textarea.form-control {
 
   .footer-logo {
     font-size: 28px;
+    display: block;
+    margin: 0 auto 20px;
   }
 
   .footer-description {
