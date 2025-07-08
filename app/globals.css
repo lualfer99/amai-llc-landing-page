@@ -25,6 +25,9 @@ body {
   background-color: var(--black);
   color: var(--white);
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -174,6 +177,13 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
+  position: relative;
+  padding-top: 180px;
+  padding-bottom:40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
 }
 
 /* Hero stability improvements for mobile */
@@ -1179,7 +1189,7 @@ body {
 
 /* Contact Section */
 .contact {
-  padding: 112px 0;
+  padding: 125px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1578,15 +1588,14 @@ textarea.form-control {
     gap: 30px;
   }
 
- 
-}
-
-/* 2) Tablets en horizontal y tablets grandes (hasta 1024px) */
-@media screen and (min-width: 821px) and (max-width: 1024px) {
-  .footer-logo {
-    display: block;
+    .footer-logo {
+    font-size: 28px;
+    display: inline-block;
     margin: 0 auto 20px;
+   
   }
+
+ 
 }
 
 @media screen and (max-width: 768px) {
@@ -1915,6 +1924,8 @@ textarea.form-control {
 
   .footer-logo {
     font-size: 28px;
+    display: block;
+    margin: 0 auto 20px;
   }
 
   .footer-description {
