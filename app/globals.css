@@ -238,12 +238,13 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   margin-bottom: -10px;
   opacity: 0.9;
   animation: fadeInUp 1s ease 0.2s forwards;
   opacity: 0;
+
 }
 
 /* Neon Buttons Effect */
