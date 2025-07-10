@@ -22,13 +22,13 @@
 }
 
 body {
-  background-color: var(--black);
-  color: var(--white);
-  overflow-x: hidden;
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-weight: 500;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ background-color: var(--black);
+ color: var(--white);
+ overflow-x: hidden;
+ font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",  Roboto, sans-serif;
+ font-weight: 500;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -58,7 +58,7 @@ body {
 
 .logo {
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--white);
   text-decoration: none;
   display: flex;
@@ -103,16 +103,19 @@ body {
 
   .footer-logo-image {
     height: 120px;
+ 
   }
 }
 
 @media screen and (max-width: 480px) {
   .logo-image {
     height: 60px;
+ 
   }
 
   .footer-logo-image {
     height: 90px;
+    
   }
 }
 
@@ -127,7 +130,7 @@ body {
   color: var(--white);
   text-decoration: none;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
   padding: 5px 0;
@@ -175,6 +178,13 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
+  position: relative;
+  padding-top: 180px;
+  padding-bottom:40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
 }
 
 /* Hero stability improvements for mobile */
@@ -195,7 +205,7 @@ body {
   .hero-stable canvas {
     opacity: 1;
     filter: none;
-    pointer-events: none;
+    pointer-events:none;
   }
 }
 
@@ -204,6 +214,7 @@ body {
   body {
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
+    font-weight: 500;
   }
 
   .hero {
@@ -220,12 +231,10 @@ body {
 
 .hero-title {
   font-size: 48px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
   animation: fadeInUp 1s ease;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
@@ -235,16 +244,15 @@ body {
   opacity: 0.9;
   animation: fadeInUp 1s ease 0.2s forwards;
   opacity: 0;
-  font-weight: 500;
 }
 
 /* Neon Buttons Effect */
-.btn {
+  .btn {
   display: inline-block;
   padding: 14px 32px;
   border-radius: 50px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -267,13 +275,11 @@ body {
 .btn-primary {
   background-color: var(--jade);
   color: var(--black);
-  font-weight: 800;
 }
 
 .btn-secondary {
   background-color: transparent;
   color: var(--jade);
-  font-weight: 700;
 }
 
 .btn::before {
@@ -286,6 +292,7 @@ body {
   z-index: -1;
   background: var(--jade);
   transform: scaleX(0);
+  
 }
 
 .btn-primary::before {
@@ -330,7 +337,7 @@ body {
 
 .section-title h2 {
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 25px;
   position: relative;
   display: inline-block;
@@ -351,7 +358,6 @@ body {
   opacity: 0.8;
   max-width: 700px;
   margin: 0 auto;
-  font-weight: 500;
 }
 
 .services-grid {
@@ -441,7 +447,7 @@ body {
 
 .service-title {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 15px;
   color: var(--white);
   transition: color 0.3s ease;
@@ -457,7 +463,6 @@ body {
   opacity: 0.8;
   margin-bottom: 15px;
   flex-grow: 1;
-  font-weight: 500;
 }
 
 .service-features {
@@ -469,7 +474,6 @@ body {
   margin-bottom: 8px;
   display: flex;
   align-items: flex-start;
-  font-weight: 500;
 }
 
 .service-features li i {
@@ -501,17 +505,20 @@ body {
   }
 }
 
+
 /* About Us Section */
 .about {
   padding: 118px 0;
   position: relative;
   overflow: hidden;
+ 
 }
 
 .about-content {
   display: flex;
   align-items: center;
   gap: 50px;
+
 }
 
 .about-text {
@@ -520,7 +527,7 @@ body {
 
 .about-title {
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 20px;
   position: relative;
 }
@@ -540,7 +547,6 @@ body {
   line-height: 1.8;
   margin-bottom: 30px;
   opacity: 0.9;
-  font-weight: 500;
 }
 
 .about-stats {
@@ -582,7 +588,7 @@ body {
 
 .stat-number {
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--jade);
   margin-bottom: 10px;
   position: relative;
@@ -590,7 +596,7 @@ body {
 
 .stat-label {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   opacity: 0.9;
 }
 
@@ -598,6 +604,7 @@ body {
   flex: 1;
   position: relative;
   min-height: 400px;
+
 }
 
 /* Neural Network Styles - Enhanced Version */
@@ -755,7 +762,7 @@ body {
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   white-space: nowrap;
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 168, 107, 0.3);
@@ -786,7 +793,7 @@ body {
   color: var(--jade);
   font-size: 14px;
   margin-bottom: 5px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .tooltip-content p {
@@ -794,7 +801,6 @@ body {
   line-height: 1.4;
   color: var(--white);
   opacity: 0.9;
-  font-weight: 500;
 }
 
 /* Satellite nodes */
@@ -835,7 +841,6 @@ body {
   white-space: nowrap;
   opacity: 0;
   transition: all 0.3s ease;
-  font-weight: 600;
 }
 
 /* Hover effects */
@@ -972,7 +977,7 @@ body {
 
 .timeline-title {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 10px;
   transition: all 0.3s ease;
 }
@@ -981,7 +986,6 @@ body {
   font-size: 14px;
   line-height: 1.6;
   opacity: 0.7;
-  font-weight: 500;
 }
 
 .timeline-item:hover .timeline-title {
@@ -1054,7 +1058,7 @@ body {
 
 .tech-name {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -1062,7 +1066,6 @@ body {
   font-size: 14px;
   opacity: 0.8;
   line-height: 1.6;
-  font-weight: 500;
 }
 
 /* Case Studies Section */
@@ -1103,7 +1106,6 @@ body {
   margin-bottom: 20px;
   position: relative;
   padding-left: 25px;
-  font-weight: 500;
 }
 
 .testimonial-text::before {
@@ -1139,14 +1141,13 @@ body {
 
 .client-name {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 
 .client-position {
   font-size: 14px;
   opacity: 0.7;
-  font-weight: 500;
 }
 
 .client-rating {
@@ -1163,7 +1164,6 @@ body {
   font-size: 18px;
   opacity: 0.8;
   margin-bottom: 30px;
-  font-weight: 600;
 }
 
 .logos-container {
@@ -1191,7 +1191,7 @@ body {
 
 /* Contact Section */
 .contact {
-  padding: 112px 0;
+  padding: 125px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1217,7 +1217,7 @@ body {
 
 .form-title {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
@@ -1247,7 +1247,6 @@ body {
   color: var(--white);
   font-size: 16px;
   transition: all 0.3s ease;
-  font-weight: 500;
 }
 
 .form-control:focus {
@@ -1286,7 +1285,7 @@ textarea.form-control {
 
 .info-content h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 
@@ -1294,7 +1293,6 @@ textarea.form-control {
   font-size: 16px;
   opacity: 0.8;
   line-height: 1.6;
-  font-weight: 500;
 }
 
 .info-item:hover .info-icon {
@@ -1319,10 +1317,11 @@ textarea.form-control {
   overflow: hidden;
 }
 
+
 .footer-logo {
   font-size: 24px;
   margin-left: 35px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--white);
   margin-bottom: 20px;
   display: inline-block;
@@ -1333,8 +1332,7 @@ textarea.form-control {
   line-height: 1.6;
   opacity: 0.7;
   margin-bottom: 0px;
-  margin-top: 0px;
-  font-weight: 500;
+  margin-top:0px;
 }
 
 .footer-social {
@@ -1364,7 +1362,7 @@ textarea.form-control {
 
 .footer-title {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 25px;
   position: relative;
   padding-bottom: 10px;
@@ -1400,7 +1398,6 @@ textarea.form-control {
   background: none;
   border: none;
   cursor: pointer;
-  font-weight: 500;
 }
 
 .footer-links button:hover,
@@ -1416,7 +1413,6 @@ textarea.form-control {
   margin-bottom: 15px;
   font-size: 14px;
   opacity: 0.7;
-  font-weight: 500;
 }
 
 .footer-bottom {
@@ -1424,7 +1420,6 @@ textarea.form-control {
   text-align: center;
   font-size: 14px;
   opacity: 0.7;
-  font-weight: 500;
 }
 
 /* Animations */
@@ -1594,14 +1589,15 @@ textarea.form-control {
     flex-direction: column;
     gap: 30px;
   }
-}
 
-/* 2) Tablets en horizontal y tablets grandes (hasta 1024px) */
-@media screen and (min-width: 821px) and (max-width: 1024px) {
-  .footer-logo {
-    display: block;
+    .footer-logo {
+    font-size: 28px;
+    display: inline-block;
     margin: 0 auto 20px;
+   
   }
+
+ 
 }
 
 @media screen and (max-width: 768px) {
@@ -1726,6 +1722,7 @@ textarea.form-control {
 
   .about {
     padding: 60px 0;
+
   }
 
   .about-title {
@@ -1843,7 +1840,8 @@ textarea.form-control {
 
   .case-studies {
     padding: 60px 0;
-    background-color: transparent;
+    background-color: transparent
+  
   }
 
   .testimonial-container {
@@ -1928,6 +1926,8 @@ textarea.form-control {
 
   .footer-logo {
     font-size: 28px;
+    display: block;
+    margin: 0 auto 20px;
   }
 
   .footer-description {
@@ -1976,15 +1976,16 @@ textarea.form-control {
 
   .hero-title {
     font-size: 35px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
     animation: fadeInUp 1s ease;
-  }
+    }
 
   .hero-subtitle {
     font-size: 12px;
     margin-bottom: -10px;
+   
   }
 
   .section-title h2 {
@@ -2018,6 +2019,7 @@ textarea.form-control {
   .tech-container {
     grid-template-columns: 1fr;
     gap: 15px;
+
   }
 
   .neural-network {

@@ -9,6 +9,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+
+   experimental: {
+    optimizeFonts: false
+  },
 }
 
 module.exports = nextConfig

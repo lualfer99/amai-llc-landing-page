@@ -2,6 +2,7 @@
 "use client"
 
 import { Facebook, Twitter, Linkedin, Instagram, ChevronRight, MapPin, Phone, Mail, Clock, Heart } from "lucide-react"
+import { FaTiktok } from "react-icons/fa"
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -20,44 +21,29 @@ export default function Footer() {
             - sm (≥640px):    grid-cols-2  → 2 columnas
             - lg (≥1024px):   grid-cols-4  → 4 columnas
         */}
-        <div className="footer-top grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6 lg:gap-x-8">
+        <div className="footer-top grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6">
           {/* Bloque 1: logo + descripción + redes */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <a href="#" className="footer-logo inline-block mb-4">
-              <img
-                src="/images/amai-logo-transparent.png"
-                alt="AMAI Logo"
-                className="h-16 sm:h-20 lg:h-24 w-auto transition-all duration-300 hover:scale-105 filter brightness-100 drop-shadow-[0_0_8px_rgba(0,168,107,0.3)]"
-              />
+          <div className="flex flex-col items-center lg:items-start text-justify">
+            <a href="#" className="footer-logo inline-block mb-4 text-justify text-right text-left text-center">
+              <img src="/images/amai-logo-transparent.png" alt="AMAI Logo" className="logo-image" />
             </a>
-            <p className="footer-description text-sm sm:text-base leading-relaxed opacity-75 text-center sm:text-left text-justify max-w-xs sm:max-w-sm lg:max-w-none">
-              Agentes entrenados con IA que responden, califican y venden por ti. Lleva tu negocio al siguiente nivel
-              con nuestras soluciones avanzadas de IA.
+            <p className="footer-description text-sm leading-relaxed opacity-75 text-center shadow-xl italic text-justify text-center text-justify">
+              Agentes entrenados con IA que responden, califican y
+              venden por ti. Lleva tu negocio al siguiente nivel con
+              nuestras soluciones avanzadas de IA
             </p>
-            <div className="footer-social flex justify-center sm:justify-start mt-4 space-x-3 sm:space-x-4">
-              <a
-                href="#"
-                className="social-link bg-white/10 rounded-full p-2 sm:p-3 hover:bg-jade hover:scale-110 transition-all duration-300 group"
-              >
-                <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-black transition-colors" />
+            <div className="footer-social flex justify-center sm:justify-start mt-4 space-x-4">
+              <a href="#" className="social-link bg-white/10 rounded-full p-2 hover:bg-white/20">
+                <Facebook className="w-5 h-5 text-white" />
               </a>
-              <a
-                href="#"
-                className="social-link bg-white/10 rounded-full p-2 sm:p-3 hover:bg-jade hover:scale-110 transition-all duration-300 group"
-              >
-                <Twitter className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-black transition-colors" />
+              <a href="https://www.linkedin.com/in/amai-solutions/" className="social-link bg-white/10 rounded-full p-2 hover:bg-white/20">
+                <Linkedin className="w-5 h-5 text-white" />
               </a>
-              <a
-                href="#"
-                className="social-link bg-white/10 rounded-full p-2 sm:p-3 hover:bg-jade hover:scale-110 transition-all duration-300 group"
-              >
-                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-black transition-colors" />
+              <a href="https://www.tiktok.com/@amai.solutions" className="social-link bg-white/10 rounded-full p-2 hover:bg-white/20">
+                <FaTiktok className="w-5 h-5 text-white" />
               </a>
-              <a
-                href="#"
-                className="social-link bg-white/10 rounded-full p-2 sm:p-3 hover:bg-jade hover:scale-110 transition-all duration-300 group"
-              >
-                <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-black transition-colors" />
+              <a href="https://www.instagram.com/amai.solutions/" className="social-link bg-white/10 rounded-full p-2 hover:bg-white/20">
+                <Instagram className="w-5 h-5 text-white" />
               </a>
             </div>
           </div>
@@ -112,31 +98,50 @@ export default function Footer() {
           {/* Bloque 3: Servicios */}
           <div>
             <h4 className="footer-title text-lg font-semibold mb-4">Servicios</h4>
-            <ul className="footer-links space-y-2 text-sm">
+             <ul className="footer-links space-y-2 text-sm">
               <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="flex items-center gap-1 hover:text-jade transition"
+                >
                   <ChevronRight className="w-4 h-4" /> Automatización
-                </a>
+                </button>
               </li>
+
               <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
-                  <ChevronRight className="w-4 h-4" /> Chatbots Avanzados
-                </a>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="flex items-center gap-1 hover:text-jade transition"
+                >
+                  <ChevronRight className="w-4 h-4" /> Agentes de IA Avanzados
+                </button>
               </li>
+
               <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="flex items-center gap-1 hover:text-jade transition"
+                >
                   <ChevronRight className="w-4 h-4" /> Análisis Predictivo
-                </a>
+                </button>
               </li>
+
               <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="flex items-center gap-1 hover:text-jade transition"
+                >
                   <ChevronRight className="w-4 h-4" /> IA Personalizada
-                </a>
+                </button>
               </li>
+
               <li>
-                <a href="#" className="flex items-center gap-1 hover:text-jade transition">
-                  <ChevronRight className="w-4 h-4" /> Consultoría
-                </a>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="flex items-center gap-1 hover:text-jade transition"
+                >
+                  <ChevronRight className="w-4 h-4" /> Consultoria
+                </button>
               </li>
             </ul>
           </div>
@@ -148,7 +153,7 @@ export default function Footer() {
               <MapPin className="w-5 h-5" /> Madrid, España
             </p>
             <p className="flex items-center gap-2 text-sm opacity-75 mb-1">
-              <Phone className="w-5 h-5" /> +34 658 38 35 17
+              <Phone className="w-5 h-5" /> +34 614 72 41 73
             </p>
             <p className="flex items-center gap-2 text-sm opacity-75 mb-1">
               <Mail className="w-5 h-5" /> info@amai.solutions
