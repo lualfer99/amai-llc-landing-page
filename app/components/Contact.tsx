@@ -7,10 +7,10 @@ import { MapPin, Mail, Phone, Clock } from "lucide-react"
 import PhoneInput from "react-phone-input-2"
 import "react-phone-input-2/lib/style.css"
 
-
 interface FormData {
   name: string
   email: string
+  company: string
   message: string
   phone: string
 }
@@ -24,6 +24,7 @@ export default function Contact() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
+    company: "",
     message: "",
     phone: "",
   })
@@ -92,11 +93,6 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!formData.phone) {
-    setStatus("error")
-    return
-  }
-
     setStatus("sending")
 
     try {
@@ -109,7 +105,7 @@ export default function Contact() {
       if (!res.ok) throw new Error(`Error ${res.status}`)
 
       // Reset form and show success
-      setFormData({ name: "", email: "", message: "", phone: "" })
+      setFormData({ name: "", email: "", company: "", message: "", phone: "" })
       setStatus("success")
 
       // Reset status after 3 seconds
@@ -137,6 +133,31 @@ export default function Contact() {
     }))
   }
 
+  const getStatusMessage = () => {
+    switch (status) {
+      case "sending":
+        return "Enviando mensaje..."
+      case "success":
+        return "¡Mensaje enviado con éxito!"
+      case "error":
+        return "Error al enviar el mensaje. Inténtalo de nuevo."
+      default:
+        return null
+    }
+  }
+
+  const getStatusColor = () => {
+    switch (status) {
+      case "sending":
+        return "text-yellow-400"
+      case "success":
+        return "text-green-400"
+      case "error":
+        return "text-red-400"
+      default:
+        return ""
+    }
+  }
 
   return (
     <section id="contact" className="contact relative z-20 bg-black py-16">
@@ -177,6 +198,17 @@ export default function Contact() {
                 />
               </div>
 
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="company"
+                  className="form-control w-full p-3 rounded bg-gray-800 text-white border border-gray-700 focus:border-jade focus:ring-1 focus:ring-jade transition-colors"
+                  placeholder="Empresa"
+                  value={formData.company}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
 
               {/* Enhanced Phone Input */}
               <div className="form-group">
@@ -192,10 +224,6 @@ export default function Contact() {
                   inputProps={{
                     name: "phone",
                     required: true,
-                    // 1) lookahead que cuente sólo dígitos (9-15), 2) valores permitidos: +, dígitos y espacios
-                  pattern: "^(?=(?:.*\\d){11,15}$)[+\\d ]+$",
-                  title: "Introduce correctamente el número de teléfono",
-                    
                     className:
                       "form-control w-full p-3 pl-16 rounded bg-gray-800 text-white border border-gray-700 focus:border-jade focus:ring-1 focus:ring-jade transition-colors",
                   }}
@@ -227,8 +255,6 @@ export default function Contact() {
                     border: "1px solid #374151",
                     color: "white",
                   }}
-
-                  required
                 />
                 {isLoadingCountry && <p className="text-sm text-gray-400 mt-1">Detectando ubicación...</p>}
               </div>
@@ -252,18 +278,7 @@ export default function Contact() {
                 {status === "sending" ? "Enviando..." : "Enviar mensaje"}
               </button>
 
-              {status === "success" && (
-                <p className="text-green-400 mt-2">
-                  ¡Gracias por tu mensaje! Te contactaremos pronto.
-                </p>
-              )}
-              {status === "error" && (
-                <p className="text-red-500 mt-2">
-                  Hubo un error al enviar. Por favor, inténtalo de nuevo.
-                </p>
-              )}
-
-              
+              {getStatusMessage() && <p className={`mt-2 text-sm ${getStatusColor()}`}>{getStatusMessage()}</p>}
             </form>
           </div>
 
@@ -289,7 +304,7 @@ export default function Contact() {
               <Phone className="w-6 h-6 text-jade flex-shrink-0" />
               <div>
                 <h4 className="font-semibold text-white">Teléfono</h4>
-                <p>+34 614 72 41 73</p>
+                <p>+34 658 38 35 17</p>
               </div>
             </div>
 

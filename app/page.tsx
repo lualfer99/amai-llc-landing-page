@@ -11,7 +11,6 @@ import SuccessCases from "./components/SuccessCases"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 
-
 export default function Home() {
   useEffect(() => {
     // Custom scroll animation using Intersection Observer
