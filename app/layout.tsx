@@ -6,7 +6,6 @@ import type { ReactNode } from "react"
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300","400","500","600","700","900"],
-  style: ["normal","italic"],
   display: "swap",           // <-- fuerza font-display: swap
 })
 
@@ -18,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="es" className={montserrat.className}>
+    <html lang="es" className={montserrat.className} antialiased>
       <body>
         {children}
       </body>
