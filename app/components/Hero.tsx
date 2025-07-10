@@ -25,7 +25,7 @@ export default function Hero() {
             </>
           </h1>
           <p className="hero-subtitle">
-            Transformamos el futuro con inteligencia artificial. Soluciones personalizadas <br/> que optimizan procesos y
+            Transformamos el futuro con inteligencia artificial. Soluciones personalizadas que optimizan procesos y
             aumentan resultados.
           </p>
           <p className="hero-subtitle neon-text">I'm not a tool. I'm AMAI</p>
